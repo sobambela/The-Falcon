@@ -1,0 +1,325 @@
+/* LOOK, a CSS FILE! :D */
+
+/* This will change the colour of the navbar links when hovered */
+.link-item:hover{
+	color: #0E153F;
+}
+.map-container{
+	margin-bottom: 25px;
+}
+.real-fluid{
+	padding: 0px;
+	margin: -15px;
+}
+.navbar ul li a:focus{
+	color: #0E153F !important;
+	
+}
+.mm-responsive-text{
+	height:500px;
+}
+.mm-paragraph{
+
+}
+
+/*==============================================================================*\
+  __  __          _ _          ___                  _           
+ |  \/  | ___  __| (_) __ _   / _ \ _   _  ___ _ __(_) ___  ___ 
+ | |\/| |/ _ \/ _` | |/ _` | | | | | | | |/ _ \ '__| |/ _ \/ __|
+ | |  | |  __/ (_| | | (_| | | |_| | |_| |  __/ |  | |  __/\__ \
+ |_|  |_|\___|\__,_|_|\__,_|  \__\_\\__,_|\___|_|  |_|\___||___/
+                                                                
+\*==============================================================================*/
+
+@media (max-width:1390px) { /* hi-res laptops and desktops */ 
+	#mm-paragraph-1{
+		font-size: 15px;
+	}
+}
+@media (max-width:1281px) { /* hi-res laptops and desktops */ 
+
+}
+@media (max-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+
+}
+@media (max-width:991px) { /* Custom */ 
+	.mm-responsive-text{
+		height: auto;
+	}
+	#mm-paragraph-1{
+		font-size: 16px;
+	}
+}
+@media (max-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+}
+@media (max-width:772px) { /* Our definition of really small */ 
+
+}
+@media (max-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+
+}
+@media (max-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+
+}
+@media (max-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ 
+
+}
+
+#wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  background: #292C30;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#wrapper.active {
+  padding-left: 0;
+}
+
+#wrapper.active #sidebar-wrapper {
+  left: 0;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
+  color: #999999;
+  display: block;
+  text-decoration: none;
+  padding-left: 60px;
+}
+
+.sidebar-nav li a span:before {
+  position: absolute;
+  left: 0;
+  color: #41484c;
+  text-align: center;
+  width: 20px;
+  line-height: 18px;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li.active {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+
+
+.content-header {
+  height: 65px;
+  line-height: 65px;
+}
+
+.content-header h1 {
+  margin: 0;
+  margin-left: 20px;
+  line-height: 65px;
+  display: inline-block;
+}
+
+#menu-toggle {
+    text-decoration: none;
+}
+
+.btn-menu {
+  color: #000;
+} 
+
+.inset {
+  padding: 0;
+}
+
+@media (max-width:767px) {
+
+#wrapper {
+  padding-left: 0;
+}
+
+#sidebar-wrapper {
+  left: 0;
+}
+
+#wrapper.active {
+  position: relative;
+  left: 250px;
+}
+
+#wrapper.active #sidebar-wrapper {
+  left: 250px;
+  width: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#menu-toggle {
+  display: inline-block;
+}
+
+.inset {
+  padding: 15px;
+}
+
+}
+.well {
+    min-height: 20px;
+    padding: 0;
+    margin-bottom: 0;
+     background-color: transparent; 
+     border: none; 
+     border-radius: 0px; 
+    -webkit-box-shadow: none;
+     box-shadow: none; 
+}
+.carousel-inner>#item {
+    min-height: 500px; 
+    max-height: 500px;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #313539;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;    
+}
+
+#demo .list-group-item {
+    opacity: 1;
+    font-weight: bolder; 
+    background-color: transparent;
+}
+.split h2.title {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 49px;
+    color: #fff;
+}
+.well h2.title {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 49px;
+    color: #fff;
+}
+.transport{
+    background-color: #2B3136;
+    color: #fff;
+}
+.fun{
+    background-color: #24292D;
+    color: #fff;
+}
+.transport #demo{
+    line-height: 25px;
+}
+.transport h3, .transport p{
+    color: #fff;
+}
+#activities {
+    text-align: center;
+    background-color: #313539;
+    color: #fff;
+        margin-bottom: 0;
+
+}
+#activities h2.title{
+    color: #fff;margin-top: 38px
+}
+#activities h3.title{
+    color: #fff;margin-bottom: 38px
+}
+li.highlight{
+    color: #F99A1B;
+}
+#copyright{
+    padding: 21px;
+    background-color: #313539;  
+}
+#copyright section{
+    padding: 21px;
+    background-color: #313539;  
+}
+#copyright .container{
+    margin-right: 0; 
+     margin-left: 0; 
+}
+p.contact-details{
+        margin-bottom: 26px;
+}
+.slidesjs-container, slidesjs-control{
+    height: 454px !important;
+}
+.slidesjs-navigation,.slidesjs-previous{
+    display: block;
+    margin-left: 29px;
+    float: left;
+    margin-right: 22px;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 7px;
+}
+.slidesjs-navigation:hover{
+    background: #fff;
+    color: #FF9D21;
+}
+.slidesjs-previous {
+    float: left;
+}
+.slidesjs-next {
+    float: right;
+}
