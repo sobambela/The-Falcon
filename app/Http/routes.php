@@ -32,6 +32,12 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/task', 'TaskController@store');
     Route::delete('/task/{task}', 'TaskController@destroy');
 
+    Route::post('/captcha', 'TaskController@captcha');
+    Route::get('/captcha', 'TaskController@captcha');
+    
+    Route::post('/book', 'TaskController@book');
+    Route::get('/book', 'TaskController@book');
+    
     Route::auth();
 
 });

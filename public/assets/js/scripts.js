@@ -233,7 +233,97 @@ $(document).ready(function(){
                 active: false,
                 effect: "slide"
             }
-        });        
+        }); 
+                        $("input:checkbox").on('click', function() {
+                          var $box = $(this);
+                          if ($box.is(":checked")) {
+                            var group = "input:checkbox[name='" + $box.attr("name") + "']";
+                            $(group).prop("checked", false);
+                            $box.prop("checked", true);
+                          } else {
+                            $box.prop("checked", false);
+                          }
+                        });			
+                        
+                        $( ".date" ).datepicker();
+                        
+
+                        $('#number_of_nights').on('click', function(){
+                            $(this).val(daydiff(parseDate($('#arrival_date').val()), parseDate($('#departure_date').val())));
+                        });
+                        
+                        function parseDate(str) {
+                            var mdy = str.split('/');
+                            return new Date(mdy[2], mdy[0]-1, mdy[1]);
+                        }
+
+                        function daydiff(first, second) {
+                            return Math.round((second-first)/(1000*60*60*24));
+                        }
+
+			$('#bookings').validate({
+				rules:{
+					realname:'required',
+					surname:'required',
+					email:{
+						required: true,
+						email: true
+					},
+					verify_email:{
+						required: true,
+						email: true,
+						equalTo: "#email"
+					},
+					telephone:{
+						required:true,
+						digits:true
+					},
+					arrival_date: 'required',
+					departure_date: 'required',
+					areas_interested_in: 'required',
+					no_of_nights: 'required',
+					no_of_guests: 'required',
+					no_of_bedrooms: 'required',
+					cellphone: 'required',
+                                        captcha: 'required'
+				},
+				messages:{
+					name:'Please enter a name',
+					surname:'Please enter you Surname',
+					email:{
+						required: 'Please enter an email',
+						email: 'Please enter a valid email'
+					},
+					verify_email:{
+						required: 'Please verification email',
+						equalTo: 'Please enter the same email as above' 
+					},
+					telephone:{
+						required:'Please enter telephone number',
+						digits:'Only digits allowed'
+					},
+					arrival_date: 'Please enter arrival date',
+					departure_date: 'Please enter departure date',
+					securitycode: 'Please enter security code',
+                                        captcha:{
+                                                required: 'The security code is required'
+                                        }
+				}
+                });
+                
+                function get_action(form) {
+                    var response = grecaptcha.getResponse();
+                    if(v.length == 0)
+                    {
+                        document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+                        return false;
+                    }
+                    if(v.length != 0)
+                    {
+                        document.getElementById('captcha').innerHTML="Captcha completed";
+                        return true; 
+                    }
+                }                    
 });
 			
 			

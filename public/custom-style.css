@@ -67,14 +67,14 @@
 }
 
 #wrapper {
-  padding-left: 250px;
+  padding-left: 333px;
   transition: all 0.4s ease 0s;
 }
 
 #sidebar-wrapper {
   margin-left: -250px;
   left: 250px;
-  width: 250px;
+  width: 320px;
   background: #292C30;
   position: fixed;
   height: 100%;
@@ -94,9 +94,6 @@
 #page-content-wrapper {
   width: 100%;
 }
-
-
-
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -109,15 +106,38 @@
 .sidebar-nav li {
   line-height: 40px;
   text-indent: 20px;
+  width: 320px;
 }
-
+.sidebar-nav > .sidebar-brand a{
+    height: 250px;
+}
+.sidebar-nav li.active a {
+  background-color: #545659 !important;
+  color: #FF9302;
+}
+.sidebar-nav li.active a.home {
+  background-color: #292C30 !important;
+  color: #FF9302;
+}
+section {
+    font-family: Lato;;
+}
 .sidebar-nav li a {
   color: #999999;
   display: block;
   text-decoration: none;
-  padding-left: 60px;
+  text-transform: uppercase;
+  font-family: 'Unica One', cursive;
+    font-size: 18px;
+    color: #fff;
+        text-align: center;
+        border-top: 1px solid #313539
 }
-
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 49px 10px 10px;
+}
 .sidebar-nav li a span:before {
   position: absolute;
   left: 0;
@@ -127,22 +147,24 @@
   line-height: 18px;
 }
 
-.sidebar-nav li a:hover,
-.sidebar-nav li.active {
-  color: #fff;
+.sidebar-nav li a:hover{
+  color: #FF9302;
   background: rgba(255,255,255,0.2);
   text-decoration: none;
+  border-right: none;
 }
-
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-  text-decoration: none;
+.sidebar-nav li.active {
+  border-right: 2px solid #FF9302;
+}
+.sidebar-nav li.sidebar-brand {
+  border-right: none !important;
 }
 
 .sidebar-nav > .sidebar-brand {
-  height: 65px;
+  height: 250px;
   line-height: 60px;
   font-size: 18px;
+  background-image:url(assets/img/logo100x100.png) no-repeat;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -170,6 +192,9 @@
 
 #menu-toggle {
     text-decoration: none;
+    font-size: 31px;
+    margin-left: 10px;
+    margin-top: 3px;    
 }
 
 .btn-menu {
@@ -321,5 +346,41 @@ p.contact-details{
     float: left;
 }
 .slidesjs-next {
+    float: right;
+}
+#book-now h2    {
+        padding-top: 41px;
+}
+#book-now form{
+        padding-top: 30px;
+}
+.codeerror{
+    display: block;
+    color: red;
+    text-align: center;
+}
+blockquote{
+    color:#4E5256;
+}
+
+#reviews .carousel, #reviews .carousel-inner>.item {
+    position: relative;
+     min-height: 150px; 
+     max-height: 220px; 
+}
+
+#reviews .carousel-indicators li {
+    border: 1px solid #000;
+}
+#reviews .carousel-indicators li.active {
+    background-color: #313539;
+}
+#reviews .carousel-indicators {
+    position: relative;
+    bottom: 0 !important;
+}
+#reviews em{
+    color: #000;
+    font-size: 22px;
     float: right;
 }
