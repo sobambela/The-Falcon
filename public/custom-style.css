@@ -109,7 +109,8 @@
   width: 320px;
 }
 .sidebar-nav > .sidebar-brand a{
-    height: 250px;
+    height: 280px;
+    padding-top: 30px;
 }
 .sidebar-nav li.active a {
   background-color: #545659 !important;
@@ -161,7 +162,7 @@ section {
 }
 
 .sidebar-nav > .sidebar-brand {
-  height: 250px;
+  height: 309px;
   line-height: 60px;
   font-size: 18px;
   background-image:url(assets/img/logo100x100.png) no-repeat;
@@ -341,6 +342,10 @@ p.contact-details{
 .slidesjs-navigation:hover{
     background: #fff;
     color: #FF9D21;
+}
+.slidesjs-navigation:visited{
+    text-decoration: none;
+    color: #fff;
 }
 .slidesjs-previous {
     float: left;

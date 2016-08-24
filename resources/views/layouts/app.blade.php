@@ -61,11 +61,11 @@
                             Rates
                         </a>
                     </li>
-                    <li>
+<!--                    <li>
                         <a href="#reviews" data-scroll>
                             Reviews
                         </a>
-                    </li>
+                    </li>-->
                     <li>
                         <a href="#activities" data-scroll>
                             Activities
